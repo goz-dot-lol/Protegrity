@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering Protegrity: A Modern Architect's Guide</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+    <style>
+        /* Custom Styles for Chart Containers to meet technical requirements */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Max width to prevent excessive stretching */
+            height: 400px; /* Default height */
+            max-height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Adjust height for mobile */
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #4338ca, #3b82f6);
+        }
+
+        /* Card Hover Effects */
+        .hover-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .hover-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+    <!-- 
+        Palette Selected: "Energetic & Professional"
+        Primary Blue: #2563EB (Tailwind blue-600)
+        Deep Indigo: #4338CA (Tailwind indigo-700)
+        Vibrant Teal: #0D9488 (Tailwind teal-600) for accents
+        Background: #F3F4F6 (Gray-100)
+        Cards: #FFFFFF
+        Text: #1F2937 (Gray-800)
+    -->
+    <!-- 
+        Source Material Analysis & Narrative Plan:
+        1. Introduction: Hook the experienced architect.
+        2. Evolution Timeline (Change): Shift from Appliance -> Cloud.
+        3. Core Concepts (Compare): Radar chart (Tokenization vs Encryption).
+        4. Strategic Analysis (Pros/Cons - NEW): Comparative analysis against Cloud Native/Legacy.
+        5. Architecture & Data Flow (Organize): HTML Diagram of ESA -> Protectors.
+        6. Integration Ecosystem (Inform): Bar chart of coverage.
+        7. Checklist (Organize): Questions for engineers.
+        
+        Visualization Choices (NO SVG, NO Mermaid):
+        - Timeline: Styled HTML list.
+        - Comparison: Chart.js Radar Chart.
+        - Strategic: Chart.js Grouped Bar (Utility vs Effort).
+        - Architecture: Flexbox/Grid HTML layout.
+    -->
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-indigo-700">Protegrity<span class="text-blue-500">Architect</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#evolution" class="text-gray-600 hover:text-indigo-700 font-medium">Evolution</a>
+                    <a href="#methods" class="text-gray-600 hover:text-indigo-700 font-medium">Methods</a>
+                    <a href="#analysis" class="text-gray-600 hover:text-indigo-700 font-medium">Pros & Cons</a>
+                    <a href="#architecture" class="text-gray-600 hover:text-indigo-700 font-medium">Architecture</a>
+                    <a href="#checklist" class="text-gray-600 hover:text-indigo-700 font-medium">Checklist</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                    <span class="block">Mastering the Modern</span>
+                    <span class="block text-gradient">Data Security Platform</span>
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                    A strategic learning plan for Security Architects. From Mainframes to Snowflake: Understanding the "Data Security Fabric."
+                </p>
+                <div class="mt-8 flex justify-center">
+                    <div class="inline-flex rounded-md shadow">
+                        <a href="#evolution" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                            Start Learning Path
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- Section 1: The Evolution (Timeline) -->
+        <section id="evolution">
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">1. The Evolution of Data Protection</h2>
+                <p class="text-lg text-gray-600">
+                    To understand Protegrity today, you must recognize the shift from perimeter defense to ubiquitous, data-centric protection. The platform has evolved significantly over the last decade.
+                </p>
+            </div>
+
+            <div class="relative border-l-4 border-blue-500 ml-6 space-y-12">
+                <!-- Item 1 -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-3.5 top-2 h-6 w-6 rounded-full bg-blue-500 border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
+                        <span class="text-sm font-bold text-blue-600 tracking-wide uppercase">2010 - 2014</span>
+                        <h3 class="text-xl font-bold text-gray-900 mt-1">The Appliance Era & Mainframes</h3>
+                        <p class="mt-2 text-gray-600">Focus on physical appliances, Data Security Managers (DSM), and protecting high-value legacy workloads on Mainframes and DB2. Introduction of Tokenization to reduce PCI audit scope.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-3.5 top-2 h-6 w-6 rounded-full bg-indigo-600 border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
+                        <span class="text-sm font-bold text-indigo-600 tracking-wide uppercase">2015 - 2018</span>
+                        <h3 class="text-xl font-bold text-gray-900 mt-1">Big Data & The Hadoop Boom</h3>
+                        <p class="mt-2 text-gray-600">Expansion into Hadoop ecosystems (Cloudera, Hortonworks). Application Protectors (AP) became critical for inserting protection logic directly into data flows (Spark, MapReduce).</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-3.5 top-2 h-6 w-6 rounded-full bg-teal-500 border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
+                        <span class="text-sm font-bold text-teal-600 tracking-wide uppercase">2019 - 2023</span>
+                        <h3 class="text-xl font-bold text-gray-900 mt-1">Cloud Native & Borderless Data</h3>
+                        <p class="mt-2 text-gray-600">Shift to the <strong>Enterprise Security Administrator (ESA)</strong>. Native integrations with Snowflake, Databricks, Redshift, and Serverless functions. "Privacy by Design" becomes the driver (GDPR, CCPA).</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-3.5 top-2 h-6 w-6 rounded-full bg-purple-600 border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
+                        <span class="text-sm font-bold text-purple-600 tracking-wide uppercase">2024 - Present</span>
+                        <h3 class="text-xl font-bold text-gray-900 mt-1">AI Guardrails & Quantum Readiness</h3>
+                        <p class="mt-2 text-gray-600">Protecting data feeding LLMs. Ensuring data is de-identified before entering AI training pipelines. Preparation for Post-Quantum Cryptography standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Methodologies (Radar Chart) -->
+        <section id="methods" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">2. The Core: Vaultless Tokenization (PVT)</h2>
+                <p class="text-gray-600 mb-6">
+                    A critical learning point is distinguishing between PVT, Encryption, and Masking. Protegrity's "secret sauce" is <strong>Protegrity Vaultless Tokenization (PVT)</strong>. Unlike Vault-based systems (which have scaling bottlenecks), PVT uses static tables to tokenize data deterministically.
+                </p>
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+                    <h4 class="font-bold text-blue-800">Why Architects Choose PVT:</h4>
+                    <ul class="list-disc list-inside text-blue-700 mt-2 space-y-1">
+                        <li><strong>Preserves Format:</strong> A 16-digit credit card remains 16 digits.</li>
+                        <li><strong>Preserves Type:</strong> Analytics tools still see "integers" or "dates".</li>
+                        <li><strong>Referential Integrity:</strong> Joins work on protected columns.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white p-4 rounded-xl shadow-lg">
+                <h3 class="text-center font-bold text-gray-700 mb-4">Protection Methodology Trade-offs</h3>
+                <!-- Chart Container -->
+                <div class="chart-container">
+                    <canvas id="protectionRadar"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Pros & Cons Analysis (NEW) -->
+        <section id="analysis" class="bg-white rounded-xl shadow-lg p-8 border-t-8 border-indigo-600">
+            <div class="mb-8 text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">3. Strategic Analysis: Protegrity vs. The Field</h2>
+                <p class="text-lg text-gray-600">
+                    Why buy a platform when AWS/Azure have native encryption? This section breaks down the "Buy vs. Build" decision for the experienced Architect.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
+                <!-- Pros Column -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-teal-600 flex items-center">
+                        <span class="mr-2 text-3xl">+</span> The Architectural Wins
+                    </h3>
+                    <div class="bg-teal-50 p-4 rounded-lg border border-teal-100">
+                        <strong class="block text-teal-800 text-lg">Cross-Cloud Portability</strong>
+                        <p class="text-sm text-teal-700 mt-1">Data protected in AWS can be moved to Azure or On-Prem and seamlessly unprotected. Native tools (like AWS KMS) lock your data into their specific cloud ecosystem.</p>
+                    </div>
+                    <div class="bg-teal-50 p-4 rounded-lg border border-teal-100">
+                        <strong class="block text-teal-800 text-lg">Separation of Duties (SoD)</strong>
+                        <p class="text-sm text-teal-700 mt-1">The Policy Manager (ESA) is distinct from the Enforcement point. The DBA (Database Admin) never sees the clear text, and the Security Admin never touches the database.</p>
+                    </div>
+                    <div class="bg-teal-50 p-4 rounded-lg border border-teal-100">
+                        <strong class="block text-teal-800 text-lg">Legacy to Modern Bridge</strong>
+                        <p class="text-sm text-teal-700 mt-1">It is one of the few platforms that can consistently protect data on a z/OS Mainframe and unprotect that same data in Snowflake, enabling safe legacy data migration.</p>
+                    </div>
+                </div>
+
+                <!-- Cons Column -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-red-500 flex items-center">
+                        <span class="mr-2 text-3xl">-</span> The Burdens
+                    </h3>
+                    <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+                        <strong class="block text-red-800 text-lg">Complexity & Overhead</strong>
+                        <p class="text-sm text-red-700 mt-1">This is not a "click and forget" tool. It requires dedicated infrastructure (Token Servers), policy management, and skilled engineers to maintain the ESA/Protector web.</p>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+                        <strong class="block text-red-800 text-lg">Latency Introduction</strong>
+                        <p class="text-sm text-red-700 mt-1">Inserting a protection step (UDF or API call) into a high-speed transaction path adds milliseconds. Poor implementation can cripple application performance.</p>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+                        <strong class="block text-red-800 text-lg">High Licensing Cost</strong>
+                        <p class="text-sm text-red-700 mt-1">Compared to "free" or cheap cloud-native encryption, Protegrity is a premium enterprise purchase. The ROI exists only if you value data utility and portability highly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Chart -->
+            <div class="mt-8">
+                <h4 class="text-center font-bold text-gray-700 mb-4">Market Comparison: Utility vs. Effort</h4>
+                <div class="chart-container" style="height: 350px;">
+                    <canvas id="competitorChart"></canvas>
+                </div>
+                <p class="text-center text-xs text-gray-500 mt-2">
+                    Visualizing the trade-off: High utility requires higher initial effort compared to native tools.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 4: Architecture Diagram (HTML/CSS) -->
+        <section id="architecture">
+            <div class="mb-10 text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">4. The Modern Architecture: Hub & Spoke</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    The platform decouples <strong>Policy Definition</strong> from <strong>Policy Enforcement</strong>. This is crucial for hybrid cloud environments.
+                </p>
+            </div>
+
+            <!-- Custom Diagram Implementation using Grid/Flex -->
+            <div class="bg-gray-800 rounded-xl p-8 shadow-2xl overflow-hidden relative">
+                <!-- Background decoration -->
+                <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: radial-gradient(#6366f1 2px, transparent 2px); background-size: 30px 30px;"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+                    
+                    <!-- Left Column: Enforcement Points (Sources) -->
+                    <div class="flex flex-col justify-center space-y-6">
+                        <div class="bg-gray-700 border-l-4 border-teal-400 p-4 rounded text-white shadow-lg">
+                            <h4 class="font-bold text-teal-400">Application Protectors</h4>
+                            <p class="text-xs text-gray-300">Java/C#/.NET SDKs embedded in app code.</p>
+                        </div>
+                        <div class="bg-gray-700 border-l-4 border-teal-400 p-4 rounded text-white shadow-lg">
+                            <h4 class="font-bold text-teal-400">Database Protectors</h4>
+                            <p class="text-xs text-gray-300">UDFs for Teradata, Oracle, SQL Server.</p>
+                        </div>
+                        <div class="bg-gray-700 border-l-4 border-teal-400 p-4 rounded text-white shadow-lg">
+                            <h4 class="font-bold text-teal-400">Cloud Protectors</h4>
+                            <p class="text-xs text-gray-300">Snowflake External Functions, AWS Lambda.</p>
+                        </div>
+                    </div>
+
+                    <!-- Center Column: The Brain (ESA) -->
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="bg-indigo-600 p-8 rounded-full shadow-[0_0_30px_rgba(79,70,229,0.5)] border-4 border-indigo-400 text-center w-48 h-48 flex flex-col items-center justify-center z-20">
+                            <h3 class="text-2xl font-black text-white">ESA</h3>
+                            <p class="text-indigo-200 text-sm font-semibold">Policy Engine</p>
+                            <div class="mt-2 text-xs text-white bg-indigo-800 px-2 py-1 rounded">Key Mgmt</div>
+                        </div>
+                        <div class="absolute w-full top-1/2 border-t-2 border-dashed border-gray-500 -z-0 hidden md:block"></div>
+                        <div class="mt-4 text-center">
+                            <span class="bg-gray-900 text-gray-300 px-3 py-1 rounded-full text-xs border border-gray-600">Auditing / SIEM</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Enforcement Points (Gateways) -->
+                    <div class="flex flex-col justify-center space-y-6">
+                        <div class="bg-gray-700 border-r-4 border-purple-400 p-4 rounded text-white shadow-lg text-right">
+                            <h4 class="font-bold text-purple-400">Data Security Gateway</h4>
+                            <p class="text-xs text-gray-300">Proxy for REST/HTTP traffic.</p>
+                        </div>
+                        <div class="bg-gray-700 border-r-4 border-purple-400 p-4 rounded text-white shadow-lg text-right">
+                            <h4 class="font-bold text-purple-400">Big Data Protectors</h4>
+                            <p class="text-xs text-gray-300">Spark/Hadoop Cluster integration.</p>
+                        </div>
+                        <div class="bg-gray-700 border-r-4 border-purple-400 p-4 rounded text-white shadow-lg text-right">
+                            <h4 class="font-bold text-purple-400">File Protectors</h4>
+                            <p class="text-xs text-gray-300">Folder/File level encryption agents.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Ecosystem Integration (Bar Chart) -->
+        <section id="ecosystem" class="bg-white rounded-xl shadow-lg p-8">
+            <div class="mb-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">5. The Integration Ecosystem</h2>
+                <p class="text-gray-600">
+                    The "Write Once, Protect Everywhere" philosophy relies on broad support.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-2/3">
+                    <div class="chart-container">
+                        <canvas id="integrationChart"></canvas>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 flex flex-col justify-center space-y-4">
+                    <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-teal-500">
+                        <h4 class="font-bold text-gray-800">Cloud Data Warehouses</h4>
+                        <p class="text-sm text-gray-600">Snowflake & Databricks are critical focus areas. Protegrity uses External Functions (Snowflake) or UDFs (Databricks).</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-gray-800">Mainframe & Legacy</h4>
+                        <p class="text-sm text-gray-600">Reliable z/OS protection remains a massive differentiator for banking/insurance clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Implementation Checklist (Interactive Cards) -->
+        <section id="checklist">
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">6. The Engineer's Checklist</h2>
+                <p class="text-lg text-gray-600">
+                    When speaking to customers or planning an implementation, these are the questions that define success or failure.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover-card border-t-4 border-red-500">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Architecture & Latency</h3>
+                    <p class="text-sm text-gray-600 mb-4">Are we protecting data at rest or in transit? What is the latency budget for tokenization calls?</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover-card border-t-4 border-yellow-500">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Policy Enforcement</h3>
+                    <p class="text-sm text-gray-600 mb-4">Who is the "User"? How does the database know the end-user identity (Service Account vs. Human)?</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover-card border-t-4 border-green-500">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Key Management</h3>
+                    <p class="text-sm text-gray-600 mb-4">Who holds the keys? Do we need simple rotation or complex re-keying of petabytes of data?</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover-card border-t-4 border-blue-500">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Format Preservation</h3>
+                    <p class="text-sm text-gray-600 mb-4">Does the downstream application perform validation (Luhn checks, Date ranges) on the data field?</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover-card border-t-4 border-indigo-500">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Availability & DR</h3>
+                    <p class="text-sm text-gray-600 mb-4">What happens if the Tokenization Server goes down? Is the system "Fail Open" or "Fail Closed"?</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover-card border-t-4 border-purple-500">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Cloud Egress Costs</h3>
+                    <p class="text-sm text-gray-600 mb-4">For Cloud Protectors: Have we calculated the cost of external function calls for massive datasets?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white mt-24 py-12 border-t-4 border-indigo-600">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-gray-400">Generated for Goz & The Architects.</p>
+                <p class="text-sm text-gray-500 mt-2">Note: This guide assumes prior knowledge of general IAM and encryption principles.</p>
+                <!-- Required Confirmation -->
+                <!-- NEITHER Mermaid JS NOR SVG were used anywhere in this output. -->
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- Utility: Label Wrapping Helper ---
+        function wrapLabel(label, maxChars = 16) {
+            if (label.length <= maxChars) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length <= maxChars) {
+                    currentLine += " " + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- Common Tooltip Config ---
+        const commonTooltipOptions = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- Chart 1: Protection Radar Chart ---
+        const radarCtx = document.getElementById('protectionRadar').getContext('2d');
+        const radarLabels = ['Performance speed', 'Analytics Utility', 'Format Preservation', 'Security Strength', 'Cloud Suitability', 'Searchability'];
+        const processedRadarLabels = radarLabels.map(l => wrapLabel(l));
+
+        new Chart(radarCtx, {
+            type: 'radar',
+            data: {
+                labels: processedRadarLabels,
+                datasets: [
+                    {
+                        label: 'Vaultless Tokenization',
+                        data: [9, 10, 10, 8, 9, 8],
+                        fill: true,
+                        backgroundColor: 'rgba(37, 99, 235, 0.2)', 
+                        borderColor: 'rgb(37, 99, 235)',
+                        pointBackgroundColor: 'rgb(37, 99, 235)',
+                        pointBorderColor: '#fff'
+                    },
+                    {
+                        label: 'AES Encryption',
+                        data: [6, 4, 2, 10, 7, 2],
+                        fill: true,
+                        backgroundColor: 'rgba(124, 58, 237, 0.2)', 
+                        borderColor: 'rgb(124, 58, 237)',
+                        pointBackgroundColor: 'rgb(124, 58, 237)',
+                        pointBorderColor: '#fff'
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                elements: { line: { borderWidth: 3 } },
+                scales: {
+                    r: {
+                        angleLines: { display: true },
+                        suggestedMin: 0,
+                        suggestedMax: 10,
+                        grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                        pointLabels: { font: { size: 12 } }
+                    }
+                },
+                plugins: {
+                    tooltip: commonTooltipOptions,
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // --- Chart 2: Competitor Comparison (NEW Grouped Bar) ---
+        const compCtx = document.getElementById('competitorChart').getContext('2d');
+        const compLabels = ['Data Utility (Analytics)', 'Cross-Cloud Portability', 'Ease of Implementation', 'Maintenance Effort'];
+        const processedCompLabels = compLabels.map(l => wrapLabel(l));
+
+        new Chart(compCtx, {
+            type: 'bar',
+            data: {
+                labels: processedCompLabels,
+                datasets: [
+                    {
+                        label: 'Protegrity Platform',
+                        data: [9, 10, 3, 4], // High utility/portability, Hard implementation
+                        backgroundColor: 'rgba(37, 99, 235, 0.8)', // Blue
+                    },
+                    {
+                        label: 'Native Cloud Tools (AWS/Azure)',
+                        data: [4, 2, 9, 8], // Low utility/portability, Easy implementation
+                        backgroundColor: 'rgba(16, 185, 129, 0.8)', // Green
+                    },
+                    {
+                        label: 'Legacy HSM / Appliances',
+                        data: [3, 4, 2, 3], // Low everything mostly
+                        backgroundColor: 'rgba(75, 85, 99, 0.8)', // Gray
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10,
+                        title: { display: true, text: 'Score (10 = Best/Highest)' }
+                    },
+                    x: { grid: { display: false } }
+                },
+                plugins: {
+                    tooltip: commonTooltipOptions,
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // --- Chart 3: Integration Ecosystem (Bar Chart) ---
+        const barCtx = document.getElementById('integrationChart').getContext('2d');
+        const barLabels = ['Snowflake', 'Databricks', 'AWS Redshift', 'Teradata (On-Prem)', 'Hadoop/Spark', 'Oracle/SQL Server'];
+        const processedBarLabels = barLabels.map(l => wrapLabel(l));
+
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: processedBarLabels,
+                datasets: [{
+                    label: 'Integration Depth Score (1-10)',
+                    data: [9, 8, 7, 10, 9, 8],
+                    backgroundColor: [
+                        'rgba(37, 99, 235, 0.8)', 
+                        'rgba(37, 99, 235, 0.8)', 
+                        'rgba(37, 99, 235, 0.6)', 
+                        'rgba(75, 85, 99, 0.8)', 
+                        'rgba(16, 185, 129, 0.8)', 
+                        'rgba(75, 85, 99, 0.6)'
+                    ],
+                    borderColor: 'transparent',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true, max: 10 },
+                    x: { grid: { display: false } }
+                },
+                plugins: {
+                    tooltip: commonTooltipOptions,
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
